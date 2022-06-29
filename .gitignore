@@ -1,0 +1,7 @@
+.hg*
+.idea*
+.htaccess*
+*wsgi
+*pyc
+*settings_local.py
+

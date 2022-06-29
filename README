@@ -1,0 +1,22 @@
+# Создать и активировать виртуальное окружение
+virtualenv <path_to_venv>/b2bbroker
+source <path_to_venv>/b2bbroker/bin/activate
+
+# Установить зависимости
+python3 -m pip install -r requirements.txt
+
+# Создать базу данных
+mysql -u root
+
+mysql> CREATE USER <user> IDENTIFIED BY <password>;
+mysql> CREATE DATABASE <db_name>;
+
+# Заполнить локальные настройки
+cd <project>
+cp b2bbroker/settings_local.py.example.py b2bbroker/settings_local.py
+
+
+# python3 manage.py migrate
+
+# python3 manage.py runserver
+
